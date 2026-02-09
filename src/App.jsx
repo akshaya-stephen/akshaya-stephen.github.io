@@ -4,6 +4,8 @@ import "./App.css";
 
 import heroImg from "./assets/cover.png";
 import skillImg from "./assets/skills.png";
+import topdf from "./assets/toPDF.jpg";
+import topdfvdo from "./assets/to_PDFvdo.mp4";
 import remindly from "./assets/ReminderAlert.jpg";
 import remindlyvdo from "./assets/remindly.mp4";
 import inrglobaly from "./assets/inr.jpg";
@@ -192,7 +194,7 @@ export default function App() {
 
   <div className="skill-category">
     <div className="category-title">Deployment & DevOps</div>
-    <div className="category-skills">GCP • AWS • CI/CD Pipelines • Docker</div>
+    <div className="category-skills">GCP • AWS(S3, Lambda, EC2) • CI/CD Pipelines • Docker</div>
   </div>
 
   <div className="skill-category">
@@ -215,6 +217,45 @@ export default function App() {
         <h2 className="reveal">Insights on My Works</h2>
  <div className="projects-list">
   {[
+    {
+      title: "toPDF",
+      desc: [
+  "toPDF is an AWS-driven, event-based backend service designed to automatically convert uploaded text files, images, and documents into standardized PDF outputs. The system relies on Amazon S3 as the primary storage layer, where file uploads trigger an automated processing pipeline. Upon object creation in the S3 bucket, an AWS Lambda function is invoked to perform content transformation and PDF generation, ensuring consistent document formatting and reliable output storage. This architecture leverages AWS-managed services to deliver a scalable, fault-tolerant, and highly available document conversion workflow.",
+  "The user-facing interface for file uploads and system interaction is developed using a Django-based web application, which acts as the orchestration layer between the client and AWS services. To implement this workflow securely and efficiently, IAM roles and fine-grained permission policies were configured to establish controlled trust relationships between S3, Lambda, and EC2 services. The AWS Lambda function is configured to be automatically invoked upon user file uploads to the Amazon S3 bucket. Once triggered, the function processes the uploaded content into a standardized PDF format, and persists the generated output to the designated S3 storage location. The application was deployed on an AWS EC2 instance and fronted with NGINX as a reverse proxy to handle incoming traffic and enforce production-ready configurations. The system is exposed via a public IP address with controlled access, ensuring secure and reliable availability while maintaining separation of concerns between compute, storage, and processing layers."
+],
+techStack: [
+    {
+    category: "Fronend",
+    items: ["Django Template"]
+  },
+  {
+    category: "Backend",
+    items: ["Django", "AWS Lambda Funtion"]
+  },
+  {
+    category: "Cloud & Storage",
+    items: ["AWS Lambda", "Amazon S3", "AWS EC2"]
+  },
+  {
+    category: "Security",
+    items: ["IAM Roles", "IAM Policies"]
+  },
+  {
+    category: "Web Server & Deployment",
+    items: ["NGINX", "Linux (Ubuntu)"]
+  },
+  {
+    category: "Networking",
+    items: ["Security Groups", "Inbound/Outbound Traffic Rules"
+    ]
+  },
+]
+
+,
+      link: "http://51.20.53.186/",
+      img: topdf,
+      video: topdfvdo, 
+    },
     {
       title: "Remindly",
       desc: [
@@ -406,7 +447,7 @@ export default function App() {
   </div>
   <div className="project-content-grid">
      <div className="project-left">
-      <h3>{proj.title}</h3>
+      <h3>{proj.title} <span className="tech-muted">(React + Django GraphQL + RabbitMQ)</span></h3>
       {proj.desc.map((para, index) => (
   <p key={index}>{para}</p>
 ))}

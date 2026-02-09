@@ -654,6 +654,13 @@ footer {
   font-weight: 500;
 }
 
+.tech-muted {
+  color: #6b7280;     
+  font-size: 0.7em;   
+  font-style: italic;
+  font-weight: 400;
+}
+
 
 /* Mobile */
 @media (max-width: 768px) {
