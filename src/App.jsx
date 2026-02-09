@@ -447,7 +447,9 @@ techStack: [
   </div>
   <div className="project-content-grid">
      <div className="project-left">
-      <h3>{proj.title} <span className="tech-muted">(React + Django GraphQL + RabbitMQ)</span></h3>
+      <h3>{proj.title} 
+        {/* <span className="tech-muted">(React + Django GraphQL + RabbitMQ)</span> */}
+        </h3>
       {proj.desc.map((para, index) => (
   <p key={index}>{para}</p>
 ))}
