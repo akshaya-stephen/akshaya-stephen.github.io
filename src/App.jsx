@@ -270,7 +270,7 @@ techStack: [
 ]
 
 ,
-      link: "http://51.20.53.186/",
+      link: "https://github.com/AkshayaStephen125/embedNchat",
       img: embednchat,
       video: embednchatvdo, 
     },
