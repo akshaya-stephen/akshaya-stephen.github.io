@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "Segoe UI", sans-serif;
   caret-color: transparent; 
-  user-select: none; 
+  /* user-select: none;  */
   outline: none;
 }
 
@@ -739,6 +739,52 @@ footer {
 
 .simple-project-link:hover {
   color: #800000;
+}
+
+/* Project Navigation Cards */
+
+.project-tabs-section {
+  margin-bottom: 60px;
+}
+
+.project-tabs {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-tab {
+  width: 260px;
+  min-height: 120px;
+
+  background: #7a1e2d;
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 16px;
+  padding: 24px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+  transition: all 0.3s ease;
+}
+
+.project-tab:hover {
+  transform: translateY(-8px);
+  background: #92253a;
+}
+
+.project-tab h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.project-tab p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  cursor: pointer;
 }
 
 /* MOBILE RESPONSIVE */

@@ -82,7 +82,7 @@ export default function App() {
   </div><br/><br/>
             <div className="social-icons">
   <a
-    href="https://github.com/AkshayaStephen125/"
+    href="https://github.com/akshaya-stephen"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="GitHub"
@@ -91,7 +91,7 @@ export default function App() {
   </a>
 &nbsp;&nbsp;&nbsp;&nbsp;
   <a
-    href="https://www.linkedin.com/in/akshaya-stephen-0982b5171/"
+    href="https://www.linkedin.com/in/akshaya-stephen "
     target="_blank"
     rel="noopener noreferrer"
     aria-label="LinkedIn"
@@ -237,9 +237,53 @@ export default function App() {
       {/* PROJECTS */}
       <section id="projects" className="section light">
         <h2 className="reveal">Insights on My Works</h2>
+        <section class="project-tabs-section">
+
+  <div class="project-tabs">
+
+    <span onClick={() => go("embednchat")} class="project-tab">
+      <h3>embedNchat</h3>
+      <p>FastAPI • RAG • Apache Kafka</p>
+    </span>
+
+    <span onClick={() => go("topdf")} class="project-tab">
+      <h3>toPDF</h3>
+      <p>Django • AWS(Lambda, S3, EC2)</p>
+      </span>
+    
+
+    <span onClick={() => go("remindly")} class="project-tab">
+      <h3>Remindly</h3>
+      <p>React • GraphQL • RabbitMQ</p>
+    </span>
+
+    <span onClick={() => go("inr")} class="project-tab">
+      <h3>INR2Globally</h3>
+      <p>Python • ETL • Apache Airflow</p>
+    </span>
+
+    <span onClick={() => go("cicd")} class="project-tab">
+      <h3>CI/CD Implementation</h3>
+      <p>GitHub Pages • GitHub Actions</p>
+    </span>
+
+    <span onClick={() => go("hearzap")} class="project-tab">
+      <h3>Hearzap</h3>
+      <p>Django • RestAPI • CronJobs</p>
+    </span>
+
+    <span onClick={() => go("cmp")} class="project-tab">
+      <h3>Cruise City</h3>
+      <p>Django • RestAPI • PostgreSQL</p>
+    </span>
+  </div>
+
+</section>
+
  <div className="projects-list">
   {[
     {
+      id: "embednchat",
       title: "embedNchat",
       desc: [
   "embedNchat is a SaaS-based application designed to help businesses integrate AI-powered customer support into their websites with minimal setup. Clients can create their own accounts, configure customized brand themes and generate an embeddable API script for seamless chatbot integration. By uploading their knowledge base documents the platform enables intelligent customer interaction directly through the embedded chat window. Website visitors can initiate real-time conversations, receive AI-generated responses based on the uploaded knowledge database.The platform also supports agent collaboration, allowing support team to manage customer issues and resolve tickets efficiently.",
@@ -270,11 +314,12 @@ techStack: [
 ]
 
 ,
-      link: "https://github.com/AkshayaStephen125/embedNchat",
+      link: "https://github.com/akshaya-stephen/embedNchat",
       img: embednchat,
       video: embednchatvdo, 
     },
     {
+      id: "topdf",
       title: "toPDF",
       desc: [
   "toPDF is an AWS-driven, event-based backend service designed to automatically convert uploaded text files, images, and documents into standardized PDF outputs. The system relies on Amazon S3 as the primary storage layer, where file uploads trigger an automated processing pipeline. Upon object creation in the S3 bucket, an AWS Lambda function is invoked to perform content transformation and PDF generation, ensuring consistent document formatting and reliable output storage. This architecture leverages AWS-managed services to deliver a scalable, fault-tolerant, and highly available document conversion workflow.",
@@ -311,11 +356,12 @@ techStack: [
 ]
 
 ,
-      link: "http://51.20.53.186/",
+      link: "https://github.com/akshaya-stephen/toPDF",
       img: topdf,
       video: topdfvdo, 
     },
     {
+      id: "remindly",
       title: "Remindly",
       desc: [
   "Remindly is a full-stack reminder management application designed to help users schedule tasks and receive timely notifications, ensuring important events and deadlines are never missed. The application enables users to create, update, and manage reminders through a clean and intuitive interface, while delivering alerts at precise times using real-time communication. The front end is built with React.js for a responsive and interactive user experience and styled using Tailwind CSS to maintain a modern, consistent design. On the back end, Django powers the core business logic and exposes a GraphQL API, allowing flexible and efficient data querying while minimizing over-fetching and improving overall performance.",
@@ -347,11 +393,12 @@ tech: "React + GraphQL + RabbitMQ + WebSocket",
   }
 ]
 ,
-      link: "https://github.com/AkshayaStephen125/Project-Remindly",
+      link: "https://github.com/akshaya-stephen/Project-Remindly",
       img: remindly,
       video: remindlyvdo, 
     },
     {
+      id: "inr",
       title: "INR2Globally",
       desc: ["INR2Globally is a data analytics and reporting project designed to extract, track, and analyze day-to-day global currency exchange rates with respect to the Indian Rupee (INR). The system enables both historical and trend-based analysis of currency movements, including daily, monthly, and comparative rate changes. These insights are visualized through interactive Power BI dashboards, allowing users to easily monitor currency fluctuations, identify trends, and make data-driven interpretations from exchange rate patterns.",
       "I built this project to gain hands-on expertise in data engineering and analytics workflows, with a strong focus on ETL automation and orchestration. The solution is implemented using Apache Airflow to design and schedule ETL pipelines that automatically extract currency data from external APIs, transform it into an analytics-ready format, and load it into PostgreSQL. Airflow schedulers ensure consistent and timely data ingestion, while PostgreSQL serves as a reliable analytical data source for Power BI. The dashboards leverage DAX queries to enable efficient data modeling, real-time reporting, and meaningful visual insights, demonstrating a complete end-to-end data analytics pipeline from ingestion to visualization. The implementation reflects practical experience in building scalable, maintainable data pipelines and delivering insights through business intelligence tools."],
@@ -380,11 +427,12 @@ tech: "React + GraphQL + RabbitMQ + WebSocket",
   }
 ]
 ,
-      link: "https://github.com/AkshayaStephen125/Project-INR2GLOBALY",
+      link: "https://github.com/akshaya-stephen/Project-INR2GLOBALY",
       img: inrglobaly,
       video: inrglobalyvdo
     },
     {
+      id: "cicd",
       title: "CI/CD Implementation",
       desc: ["This portfolio website implements a fully automated CI/CD pipeline to build and deploy a modern JavaScript frontend application using GitHub Actions. The pipeline ensures reliable, repeatable builds and seamless deployment to GitHub Pages whenever changes are pushed to the main branch. By automating the build and deployment lifecycle, the project eliminates manual intervention, improves delivery speed, and ensures that only production-ready artifacts are published, making it suitable for professional-grade frontend applications.",
       "The workflow is designed with separate build and deploy jobs to maintain clear separation of concerns and enforce dependency control. The build stage checks out the repository, configures a Node.js 20 environment, installs dependencies, and generates an optimized production build, which is stored as a versioned artifact. The deploy stage consumes this artifact and securely publishes it to GitHub Pages using token-based authentication, ensuring controlled access and safe deployments. Conditional execution and artifact-based handoff improve reliability, traceability, and scalability of the deployment process."],
@@ -405,11 +453,12 @@ tech: "React + GraphQL + RabbitMQ + WebSocket",
       }
     ]
     ,
-      link: "https://github.com/AkshayaStephen125/AkshayaStephen125.github.io/blob/main/.github/workflows/main.yml",
+      link: "https://github.com/akshaya-stephen/akshaya-stephen.github.io/blob/main/.github/workflows/main.yml",
       img: cicd,
       video: cicdvdo
     },
        {
+        id: "hearzap",
       title: "Hearzap — Complete Hearing Care Platform",
       desc: ["Hearzap is India’s first comprehensive digital platform for end-to-end hearing care, offering users the ability to take rapid hearing tests, consult with certified audiologists, and find personalized hearing aids. Combining online and offline services through a network of 150+ experience stores, Hearzap makes hearing health accessible and convenient, providing in-store and virtual consultations, a curated marketplace for hearing aids, and tools to increase awareness about hearing care. The platform leverages technology to deliver personalized solutions, reduce the stigma around hearing loss, and ensure users receive professional support tailored to their needs.",
         "Through this project, I transitioned from a service-based role to working directly with the client’s product-based company, contributing to the product launch and delivering APIs for mobile developers. I implemented business logic for customer-facing websites, management dashboards, and administrative tools, ensuring seamless functionality across platforms. Additionally, I developed automated report generation using CronJobs, set up SMS alerts on scheduled times, and created dynamic reports such as audiogram reports from the customer’s perspective. My responsibilities also included end-to-end production support, timely bug fixes, and continuous feature updates to enhance the product’s performance and user experience."
@@ -443,6 +492,7 @@ tech: "Django + RestAPI + CronJobs",
       img: hearzap
     },
       {
+        id: "CPM",
       title: "Cruise City – Explore on Shore",
       desc: ["Cruise City is a mobile application designed to help cruise passengers maximize their limited shore time by delivering personalized city guides and recommendations tailored to their interests, cruise itinerary, and available duration. The application provides curated suggestions for attractions, restaurants, and local events, along with interactive maps for easy navigation, traveler reviews and ratings, and the ability to explore and shop local products with convenient pick-up options at cruise terminals. In addition to enhancing traveler convenience, the platform promotes sustainable tourism by highlighting eco-friendly experiences and offering practical travel tips, improving the overall visitor experience in destinations such as Copenhagen.",
         "As part of this implementation, I was responsible for developing the core backend business logic for the administration dashboard and designing secure RESTful APIs to support seamless mobile application integration. The APIs were implemented with JWT-based authentication to ensure secure access and role-based operations. I developed a key offline-first feature, implementing a PostgreSQL-based local database that automatically synchronizes with the central server whenever network connectivity becomes available.This approach ensured reliable data availability, consistent CRUD operations, and efficient data synchronization, resulting in a resilient system that supports real-world mobile usage scenarios and improves both user experience and administrative efficiency."
@@ -475,7 +525,7 @@ tech: "Django + RestAPI + CronJobs",
       img: cmp
     }
   ].map((proj, i) => (
-    <div key={i} className="project-card reveal">
+    <div key={i} className="project-card reveal" id={proj.id}>
 
       {/* Media Row */}
       <div className="media-row">
@@ -546,11 +596,11 @@ tech: "Django + RestAPI + CronJobs",
   <h2 className="reveal">Other Self-Driven Projects</h2>
   <div className="project-links-card reveal">
     {[
-      { name: "Drowsiness-Detection(Python & OpenCV)", link: "https://github.com/AkshayaStephen125/Drowsiness-Detection" },
+      { name: "Drowsiness-Detection(Python & OpenCV)", link: "https://github.com/akshaya-stephen/Drowsiness-Detection" },
       { name: "WooEats(Python, Django & Android)", link: "https://myblog.com" },
       { name: "Todo(FastAPI & GraphQL Strawberry)", link: "https://todomgr.com" },
-      { name: "E-Attendance(Java)", link: "https://github.com/AkshayaStephen125/E-Attendance" },
-      { name: "Online Yearbook(Java)", link: "https://github.com/AkshayaStephen125/Online-yearbook" },
+      { name: "E-Attendance(Java)", link: "https://github.com/akshaya-stephen/E-Attendance" },
+      { name: "Online Yearbook(Java)", link: "https://github.com/akshaya-stephen/Online-yearbook" },
       // { name: "Chat App", link: "https://chatapp.com" },
     ].map((proj, i) => (
       <u><a
@@ -574,7 +624,7 @@ tech: "Django + RestAPI + CronJobs",
         <p>Email: akshayastephen125@gmail.com</p><br/>
               <div className="social-icons">
   <a
-    href="https://github.com/AkshayaStephen125/"
+    href="https://github.com/akshaya-stephen"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="GitHub"
@@ -583,7 +633,7 @@ tech: "Django + RestAPI + CronJobs",
   </a>
 &nbsp;&nbsp;&nbsp;&nbsp;
   <a
-    href="https://www.linkedin.com/in/akshaya-stephen-0982b5171/"
+    href="https://www.linkedin.com/in/akshaya-stephen"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="LinkedIn"
