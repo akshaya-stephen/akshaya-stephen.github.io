@@ -492,7 +492,7 @@ tech: "Django + RestAPI + CronJobs",
       img: hearzap
     },
       {
-        id: "CPM",
+        id: "cmp",
       title: "Cruise City – Explore on Shore",
       desc: ["Cruise City is a mobile application designed to help cruise passengers maximize their limited shore time by delivering personalized city guides and recommendations tailored to their interests, cruise itinerary, and available duration. The application provides curated suggestions for attractions, restaurants, and local events, along with interactive maps for easy navigation, traveler reviews and ratings, and the ability to explore and shop local products with convenient pick-up options at cruise terminals. In addition to enhancing traveler convenience, the platform promotes sustainable tourism by highlighting eco-friendly experiences and offering practical travel tips, improving the overall visitor experience in destinations such as Copenhagen.",
         "As part of this implementation, I was responsible for developing the core backend business logic for the administration dashboard and designing secure RESTful APIs to support seamless mobile application integration. The APIs were implemented with JWT-based authentication to ensure secure access and role-based operations. I developed a key offline-first feature, implementing a PostgreSQL-based local database that automatically synchronizes with the central server whenever network connectivity becomes available.This approach ensured reliable data availability, consistent CRUD operations, and efficient data synchronization, resulting in a resilient system that supports real-world mobile usage scenarios and improves both user experience and administrative efficiency."
