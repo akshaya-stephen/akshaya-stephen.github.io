@@ -85,31 +85,62 @@ This project uses GitHub Actions to automate the build process whenever code is 
 ## GitHub Actions Workflow
 
 ```yaml
-name: Portfolio CI/CD
-
+name: Build and Deploy
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
+permissions:
+  contents: write
+  
+env:
+  CI: false
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - name: Checkout Repo
+        uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Node
+        uses: actions/setup-node@v1
         with:
           node-version: 20
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm install
 
-      - name: Build Application
+      - name: Build Project
         run: npm run build
+
+      - name: Upload production-ready build file
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-files
+          path: ./dist
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Download artifat
+        uses: actions/download-artifact@v4
+        with:
+          name: production-files
+          path: ./dist
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
 ```
 
 ---
